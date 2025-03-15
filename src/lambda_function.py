@@ -7,6 +7,8 @@ def lambda_handler(event, context):
     token = event['authorizationToken']
     secret_key = get_jwt_secret()
 
+    token = token.replace('Bearer ', '')
+
     try:
         jwt.decode(token, secret_key, algorithms=['HS256'])
     except ExpiredSignatureError:

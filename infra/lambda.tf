@@ -12,7 +12,7 @@ resource "aws_lambda_function" "authorizer_lambda" {
   function_name    = "tech-challenge-authorizer"
   filename         = data.archive_file.lambda_package.output_path
   handler          = "lambda_function.lambda_handler"
-  runtime          = "python3.12"
+  runtime          = "python3.10"
   role             = data.aws_iam_role.role.arn
   source_code_hash = filebase64sha256(data.archive_file.lambda_package.output_path)
 }

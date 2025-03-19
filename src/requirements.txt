@@ -1,2 +1,4 @@
 boto3
 PyJWT
+requests
+python-jose

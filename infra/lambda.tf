@@ -17,7 +17,7 @@ resource "aws_lambda_function" "authorizer_lambda" {
   source_code_hash = filebase64sha256(data.archive_file.lambda_package.output_path)
   environment {
     variables = {
-      USER_POOL_ID = "us-east-1_example"
+      USER_POOL_ID = "us-east-1_XajoTevCM"
     }
   }
 }
